@@ -1,0 +1,33 @@
+<h1>График</h1>
+
+<% if @data_sum %>
+    <%= line_chart @data_sum.map { |data_part| { data: data_part, color: "#b00" } }, round: 2, title: @func_string %>
+<% end %>
+
+<%= link_to 'Back', root_url %>
+
+<% if @tables %>
+    <table>
+        <thead>
+            <tr>
+                <th>Функция</th>
+                <th>от</th>
+                <th>до</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @tables.each do |table| %>
+                <tr>
+                    <td><%= table.func %></td>
+                    <td><%= table.lower_x %></td>
+                    <td><%= table.upper_x %></td>
+                    <td><%= link_to 'Show' %></td>
+                    <td><%= link_to 'Destroy', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>
+
+<!--library: { gridLines: { yAxes: [{ gridLines: { display: false }, ticks: { maxTicksLimit: 5 } }] }})-->

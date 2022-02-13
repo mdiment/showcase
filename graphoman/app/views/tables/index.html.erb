@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Func</th>
+      <th>Lower x</th>
+      <th>Upper x</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tables.each do |table| %>
+      <tr>
+        <td><%= table.func %></td>
+        <td><%= table.lower_x %></td>
+        <td><%= table.upper_x %></td>
+        <td><%= table.user_id %></td>
+        <td><%= link_to 'Show', table %></td>
+        <td><%= link_to 'Destroy', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Table', new_table_path %>

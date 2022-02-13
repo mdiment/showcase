@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Func:</strong>
+  <%= @table.func %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @table.result %>
+</p>
+
+<p>
+  <strong>Lower x:</strong>
+  <%= @table.lower_x %>
+</p>
+
+<p>
+  <strong>Upper x:</strong>
+  <%= @table.upper_x %>
+</p>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>
