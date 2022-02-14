@@ -1,16 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Это моя зачётная работа на RubyOnRails. 
+    реализована идентификация, аутентификация и авторизация через Cookies
+    использованы модели, которые связаны между собой
+    подключён AJAX
+    для построения графиков использован d3js
+    для расчёта точек используется код из папки parser, написанный на С++
+    класс, ответственный за расчёт, интегрирован в Ruby с помощью rice
 
-Things you may want to cover:
+* Ruby версия: 2.7.0
 
-* Ruby version: 2.7.0
-
-* Rails version: 6.1.4.4
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
+* Rails версия: 6.1.4.4
