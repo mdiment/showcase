@@ -44,7 +44,7 @@ sregex_iterator find_end_of_subf(sregex_iterator it, string s){
         if (string_to_compare == ")")
             level--;
 
-        if (((find_priority(operations_map[string_to_compare]) == priority_to_find) && (level == 0)))
+        if (((find_priority(operations_map[string_to_compare]) <= priority_to_find) && (level == 0)))
             return it;
         it++;
     }

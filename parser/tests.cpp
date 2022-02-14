@@ -50,7 +50,18 @@ TEST(Parser_TEST_4, parser_brackets_multi_test) {
     EXPECT_EQ((stof(output.str()) - (-30))< eps, true);
 }
 
-TEST(Parser_TEST_5, parser_brackets_complex_test) {
+TEST(Parser_TEST_5_1, parser_brackets_multi_test) {
+    stringstream input;
+    stringstream output = stringstream();
+	string s = "1/(x -2) / (x+ 4.5) + 3";
+    double x = 100.5;
+    input << s << endl;
+    input << x;
+    run_for_test(input, output);
+    EXPECT_EQ((stof(output.str()) - (3))< eps, true);
+}
+
+TEST(Parser_TEST_5_2, parser_brackets_complex_test) {
     stringstream input;
     stringstream output = stringstream();
 	string s = "2 *x + (3 -x)/ (-2) +7.3";
